@@ -1,0 +1,23 @@
+# ProBuilder 5.0.4
+# https://unity3d.com/unity/features/worldbuilding/probuilder
+# 4/27/2023 3:25:47 PM
+
+mtllib ./CL-Map.mtl
+o CL-Map
+
+g PolyShape
+v 0 0 0
+v -2 0 0
+v -2 0 -30
+v 0 0 -30
+
+vt 0 1
+vt 1 1
+vt 1 -29
+vt 0 -29
+
+vn 0 1 0
+
+usemtl Coridor
+f 2/2/1 1/1/1 4/4/1 3/3/1
+
