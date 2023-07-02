@@ -16,7 +16,7 @@ public class DebugController : MonoBehaviour
 
     float xRot;
     float yRot;
-    int speed;
+    float speed;
 
     private void Start()
     {
@@ -38,16 +38,16 @@ public class DebugController : MonoBehaviour
 
             mCam.localRotation = Quaternion.Euler(xRot, yRot, 0.0f);
 
-            if (Input.GetKey(KeyCode.LeftShift)) speed = 4; else speed = 8;
+            if (!Input.GetKey(KeyCode.LeftShift)) speed = 0.05f; else speed = 0.1f;
 
-            if (Input.GetKey(KeyCode.W)) transform.position += transform.forward / speed + Vector3.forward * Time.deltaTime;
-            if (Input.GetKey(KeyCode.S)) transform.position += -transform.forward / speed - Vector3.forward * Time.deltaTime;
+            if (Input.GetKey(KeyCode.W)) transform.position += (transform.forward  + Vector3.forward * Time.deltaTime) * speed;
+            if (Input.GetKey(KeyCode.S)) transform.position += (-transform.forward  - Vector3.forward * Time.deltaTime) * speed;
 
-            if (Input.GetKey(KeyCode.A)) transform.position += -transform.right / speed - Vector3.right * Time.deltaTime;
-            if (Input.GetKey(KeyCode.D)) transform.position += transform.right / speed + Vector3.right * Time.deltaTime;
+            if (Input.GetKey(KeyCode.A)) transform.position += (-transform.right  - Vector3.right * Time.deltaTime) * speed;
+            if (Input.GetKey(KeyCode.D)) transform.position += (transform.right  + Vector3.right * Time.deltaTime) * speed;
 
-            if (Input.GetKey(KeyCode.Space)) transform.position += transform.up / speed + Vector3.up * Time.deltaTime;
-            if (Input.GetKey(KeyCode.LeftControl)) transform.position += -transform.up / speed - Vector3.up * Time.deltaTime;
+            if (Input.GetKey(KeyCode.Space)) transform.position += (transform.up + Vector3.up * Time.deltaTime) * speed;
+            if (Input.GetKey(KeyCode.LeftControl)) transform.position += (-transform.up - Vector3.up * Time.deltaTime) * speed;
         }
         else
         {

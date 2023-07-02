@@ -3,26 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Rooms
-  - Coridor
-  - Small Room
-  - Medium Room
-  - Large Room
-  - Start Room
-  - End Room
-  - Staircase Down
-  - Staircase Up
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
-  - Room
-  - Map
-  - Outlined
+  - 
+  - 
+  - 
   - 
   - 
   - 
