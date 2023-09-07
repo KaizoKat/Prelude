@@ -5,9 +5,8 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] Transform obj;
-    Vector3 curvel;
-    void Update()
+    private void Update()
     {
-        transform.position = Vector3.SmoothDamp(transform.position, obj.position,ref curvel, Time.deltaTime);
+        transform.position = obj.position;
     }
 }

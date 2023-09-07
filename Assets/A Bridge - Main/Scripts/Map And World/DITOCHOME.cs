@@ -10,7 +10,6 @@ public class DITOCHOME : MonoBehaviour
 
     private Camera _cam;
     private RaycastHit _out;
-    private GameObject _effectO;
 
     [SerializeField] private ControllsHandler _ch;
     [SerializeField] private GameObject ui_descriptionHolder;
@@ -30,7 +29,7 @@ public class DITOCHOME : MonoBehaviour
     {
         ui_descriptionHolder.transform.position = Vector3.Lerp(ui_descriptionHolder.transform.position, Input.mousePosition, Time.deltaTime * 16);
 
-        if (GetComponent<MapCameraController>().isMapOn)
+        if (true) //while map is on.
         {
             if (Physics.Raycast(_cam.ScreenPointToRay(Input.mousePosition/2), out _out,10))
             {

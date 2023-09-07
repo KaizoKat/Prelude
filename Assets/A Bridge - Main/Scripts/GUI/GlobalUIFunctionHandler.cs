@@ -148,7 +148,6 @@ public class GlobalUIFunctionHandler : MonoBehaviour
             else if (MenusI[0].GetComponent<AnimationHandle>().finalized == true)
             {
                 Application.Quit();
-                EditorApplication.isPlaying = false;
             }
         }
 
